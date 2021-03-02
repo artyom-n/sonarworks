@@ -12,12 +12,18 @@ import axios from 'axios';
 const Home = () => {
 
   const [privacy, setPrivacy] = useState<string | undefined>()
+  const [partnership, setPartnership] = useState<string | undefined>()
 
   useEffect(() => {
     axios
       .get('https://www.sonarworks.com/api/legal/privacy')
       .then((res) => {
         setPrivacy(res.data.title);
+      });
+      axios
+      .get('https://www.sonarworks.com/api/legal/partnership')
+      .then((res) => {
+        setPartnership(res.data.title);
       });
   }, []);
 
@@ -48,7 +54,7 @@ const Home = () => {
           text={privacy + ' →'}
         />
         <Statement
-          text="Partnership Policy →"
+          text={partnership + ' →'}
         />
         <Statement
           text="Terms and Conditions →"
