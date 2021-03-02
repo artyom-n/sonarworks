@@ -2,7 +2,7 @@ import React from 'react';
 import style from "./statement.module.scss";
 
 type Props = {
-  text: string;
+  text: string | undefined;
 };
 
 const Statement = ({text}: Props) => {

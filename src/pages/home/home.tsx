@@ -4,24 +4,21 @@ import logo from "../../assets/images/logo.svg"
 import Statement from '../../components/statement/statement';
 import axios from 'axios';
 
-type Privacy = {  
-  title: string,
-  content: string
-}
+// type Privacy = {  
+//   title: string,
+//   content: string
+// }
 
 const Home = () => {
 
-  const [privacy, setPrivacy] = useState<Privacy>()
+  const [privacy, setPrivacy] = useState<string | undefined>()
 
   useEffect(() => {
-      axios
+    axios
       .get('https://www.sonarworks.com/api/legal/privacy')
       .then((res) => {
-        const data = res.data;
-        setPrivacy(data);
-        console.log('Title:', data.title)
-        console.log('Content:', data.content)
-    });
+        setPrivacy(res.data.title);
+      });
   }, []);
 
   return (
@@ -31,16 +28,16 @@ const Home = () => {
           <div className="col-md-2">
             <div className={style.nav_item}>
               Sonarworks
-            </div>            
+            </div>
           </div>
           <div className="col-md-9">
             <div className={style.nav_item}>
               Legal centre
-            </div>            
+            </div>
           </div>
           <div className="col-md-1">
-            <img 
-              src={logo} 
+            <img
+              src={logo}
               alt="sonarworks"
             />
           </div>
@@ -48,7 +45,7 @@ const Home = () => {
       </div>
       <div className={style.statements}>
         <Statement
-          text="Privacy Policy →"
+          text={privacy}
         />
         <Statement
           text="Partnership Policy →"
@@ -64,7 +61,7 @@ const Home = () => {
         />
         <Statement
           text="Sonarworks True-Fi privacy statement →"
-        />      
+        />
       </div>
       <div className={style.footer}>
         © 2020 Sonarworks Inc. All rights reserved.
