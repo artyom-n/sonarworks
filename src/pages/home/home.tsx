@@ -45,7 +45,7 @@ const Home = () => {
       </div>
       <div className={style.statements}>
         <Statement
-          text={privacy}
+          text={privacy + ' →'}
         />
         <Statement
           text="Partnership Policy →"
