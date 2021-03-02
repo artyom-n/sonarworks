@@ -1,0 +1,54 @@
+import React from 'react';
+import style from "./home.module.scss";
+import logo from "../../assets/images/logo.svg"
+import Statement from '../../components/statement/statement';
+
+const Home = () => {
+
+  return (
+    <div className="container">
+      <div className={style.nav}>
+        <div className="row">
+          <div className="col-md-2">
+            <div className={style.nav_item}>
+              Sonarworks
+            </div>            
+          </div>
+          <div className="col-md-9">
+            <div className={style.nav_item}>
+              Legal centre
+            </div>            
+          </div>
+          <div className="col-md-1">
+            <img 
+              src={logo} 
+              alt="sonarworks"
+            />
+          </div>
+        </div>
+      </div>
+      <div className={style.statements}>
+        <Statement
+          text="Privacy Policy →"
+        />
+        <Statement
+          text="Partnership Policy →"
+        />
+        <Statement
+          text="Terms and Conditions →"
+        />
+        <Statement
+          text="Cookies policy →"
+        />
+        <Statement
+          text="Support Service →"
+        />
+        <Statement
+          text="Sonarworks True-Fi privacy statement →"
+        />      
+      </div>
+    </div>
+  )
+};
+
+export default Home;
