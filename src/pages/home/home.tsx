@@ -16,10 +16,11 @@ const Home = () => {
   useEffect(() => {
       axios
       .get('https://www.sonarworks.com/api/legal/privacy')
-      .then((repos) => {
-        const data = repos.data;
+      .then((res) => {
+        const data = res.data;
         setPrivacy(data);
-        console.log('Data', data)
+        console.log('Title:', data.title)
+        console.log('Content:', data.content)
     });
   }, []);
 
@@ -47,7 +48,7 @@ const Home = () => {
       </div>
       <div className={style.statements}>
         <Statement
-          text="Privacy Policy →"          
+          text="Privacy Policy →"
         />
         <Statement
           text="Partnership Policy →"
