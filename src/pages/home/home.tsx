@@ -47,6 +47,9 @@ const Home = () => {
           text="Sonarworks True-Fi privacy statement →"
         />      
       </div>
+      <div className={style.footer}>
+        © 2020 Sonarworks Inc. All rights reserved.
+      </div>
     </div>
   )
 };
