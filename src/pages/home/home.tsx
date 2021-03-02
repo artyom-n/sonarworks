@@ -1,9 +1,27 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import style from "./home.module.scss";
 import logo from "../../assets/images/logo.svg"
 import Statement from '../../components/statement/statement';
+import axios from 'axios';
+
+type Privacy = {  
+  title: string,
+  content: string
+}
 
 const Home = () => {
+
+  const [privacy, setPrivacy] = useState<Privacy>()
+
+  useEffect(() => {
+      axios
+      .get('https://www.sonarworks.com/api/legal/privacy')
+      .then((repos) => {
+        const data = repos.data;
+        setPrivacy(data);
+        console.log('Data', data)
+    });
+  }, []);
 
   return (
     <div className="container">
@@ -29,7 +47,7 @@ const Home = () => {
       </div>
       <div className={style.statements}>
         <Statement
-          text="Privacy Policy →"
+          text="Privacy Policy →"          
         />
         <Statement
           text="Partnership Policy →"
