@@ -1,4 +1,5 @@
 .nav {
+    display: flex;
     height: 96px;
     background-color: black;
     color: white;
@@ -7,12 +8,40 @@
     line-height: 24px;
 }
 
-.nav_item {
+.sonarworks {
     border-right: 1px solid #313335;
     height: 96px;
+    flex-basis: 16.66666667%;
+}
+
+.legal {
+    border-right: 1px solid #313335;
+    height: 96px;
+    flex-basis: 75%;
+}
+
+.wrapper {
+    flex-basis: 8.33333333%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .link {
     text-decoration: none;    
     color: white
 }
+
+@media (max-width: 600px) {
+    .sonarworks {        
+        flex-basis: 50%;
+    }
+    
+    .legal {        
+        flex-basis: 25%;
+    }
+    
+    .wrapper {
+        flex-basis: 25%;        
+    }  
+  }

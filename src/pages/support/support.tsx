@@ -19,7 +19,7 @@ const Support = () => {
   }, [])
 
   return (
-    <div className="container">
+    <>
       <Nav />
       <h3
         className={style.title}
@@ -31,7 +31,7 @@ const Support = () => {
         dangerouslySetInnerHTML={{__html: support}} 
       />
       <Footer />
-    </div>
+    </>
   )    
 }
 

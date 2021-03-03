@@ -4,10 +4,8 @@ import style from "./footer.module.scss";
 const Footer = () => {
 
   return (
-    <div className="container">      
-      <div className={style.footer}>
-        © 2021 Sonarworks Inc. All rights reserved.
-      </div>
+    <div className={style.footer}>
+      © 2021 Sonarworks Inc. All rights reserved.
     </div>
   )
 };

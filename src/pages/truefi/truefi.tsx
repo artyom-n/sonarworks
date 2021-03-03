@@ -19,7 +19,7 @@ const Truefi = () => {
   }, [])
 
   return (
-    <div className="container">
+    <>
       <Nav />
       <h3
         className={style.title}
@@ -31,7 +31,7 @@ const Truefi = () => {
         dangerouslySetInnerHTML={{__html: truefi}} 
       />
       <Footer />
-    </div>
+    </>
   )    
 }
 

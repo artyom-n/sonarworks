@@ -19,7 +19,7 @@ const Privacy = () => {
   }, [])  
 
   return (
-    <div className="container">
+    <>
       <Nav />
       <h3
         className={style.title}
@@ -31,7 +31,7 @@ const Privacy = () => {
         dangerouslySetInnerHTML={{__html: privacy}} 
       />
       <Footer />
-    </div>
+    </>
   )    
 }
 

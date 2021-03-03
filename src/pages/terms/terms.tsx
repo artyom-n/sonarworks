@@ -19,7 +19,7 @@ const Terms = () => {
   }, [])
 
   return (
-    <div className="container">
+    <>
       <Nav />
       <h3
         className={style.title}
@@ -31,7 +31,7 @@ const Terms = () => {
         dangerouslySetInnerHTML={{__html: terms}} 
       />
       <Footer />
-    </div>
+    </>
   )    
 }
 
