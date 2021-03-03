@@ -9,27 +9,27 @@ const Statements = () => {
       <div className={style.statements}>
         <Link className={style.link} to="/privacy">
           Privacy Policy →
-            </Link>
+        </Link>
       </div>
       <div className={style.statements}>
         <Link className={style.link} to="/partnership">
           Partnership Policy →
-            </Link>
+        </Link>
       </div>
       <div className={style.statements}>
         <Link className={style.link} to="/terms">
           Terms and Conditions →
-            </Link>
+        </Link>
       </div>
       <div className={style.statements}>
         <Link className={style.link} to="/cookies">
-          Cookies policy →
-            </Link>
+          Sonarworks Cookies policy →
+        </Link>
       </div>
       <div className={style.statements}>
         <Link className={style.link} to="/support">
           Support Service →
-            </Link>
+        </Link>
       </div>
       <div className={style.statements}>
         <Link className={style.link} to="/truefi">
