@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/sonarworks/static/css/main.c3bcb22f.chunk.css",
+    "main.js": "/sonarworks/static/js/main.a4b4b5db.chunk.js",
+    "main.js.map": "/sonarworks/static/js/main.a4b4b5db.chunk.js.map",
+    "runtime-main.js": "/sonarworks/static/js/runtime-main.a7195fe4.js",
+    "runtime-main.js.map": "/sonarworks/static/js/runtime-main.a7195fe4.js.map",
+    "static/js/2.94ff317b.chunk.js": "/sonarworks/static/js/2.94ff317b.chunk.js",
+    "static/js/2.94ff317b.chunk.js.map": "/sonarworks/static/js/2.94ff317b.chunk.js.map",
+    "static/js/3.d262b508.chunk.js": "/sonarworks/static/js/3.d262b508.chunk.js",
+    "static/js/3.d262b508.chunk.js.map": "/sonarworks/static/js/3.d262b508.chunk.js.map",
+    "index.html": "/sonarworks/index.html",
+    "static/css/main.c3bcb22f.chunk.css.map": "/sonarworks/static/css/main.c3bcb22f.chunk.css.map",
+    "static/js/2.94ff317b.chunk.js.LICENSE.txt": "/sonarworks/static/js/2.94ff317b.chunk.js.LICENSE.txt",
+    "static/media/logo.b709450b.svg": "/sonarworks/static/media/logo.b709450b.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a7195fe4.js",
+    "static/js/2.94ff317b.chunk.js",
+    "static/css/main.c3bcb22f.chunk.css",
+    "static/js/main.a4b4b5db.chunk.js"
+  ]
+}
