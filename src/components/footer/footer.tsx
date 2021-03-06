@@ -4,9 +4,12 @@ import style from "./footer.module.scss";
 const Footer = () => {
 
   return (
-    <footer className={style.footer}>
+    <div className={style.wrapper}>
+      <footer className={style.footer}>
       © 2021 Sonarworks Inc. All rights reserved.
     </footer>
+    </div>
+    
   )
 };
 

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import style from "./legal.module.scss";
 import Nav from '../../components/nav/nav';
 import Footer from '../../components/footer/footer';
-import style from "./legal.module.scss";
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
 
@@ -31,15 +31,17 @@ const Legal = () => {
       ) : (
         <>
           <Nav />
-          <h3
-            className={style.title}
-          >
-            {title}
-          </h3>
-          <div
+          <section className={style.legal}>
+            <h3
+              className={style.title}
+            >
+              {title}
+            </h3>
+            <div
             className={style.content}
             dangerouslySetInnerHTML={{ __html: content }}
-          />
+            />
+          </section>
           <Footer />
         </>
       )
