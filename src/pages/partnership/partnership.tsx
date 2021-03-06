@@ -6,8 +6,8 @@ import axios from 'axios';
 
 const Partnership = () => {
 
-  const [title, setTitle] = useState<any>()
-  const [partnership, setPartnership] = useState<any>()
+  const [title, setTitle] = useState<string | undefined>()
+  const [partnership, setPartnership] = useState<string | undefined>()
 
   useEffect(() => {
     axios
@@ -17,6 +17,15 @@ const Partnership = () => {
         setPartnership(res.data.content);
       })    
   }, [])
+
+  if (!title || !partnership) {
+    return(
+      <div 
+        className={style.loading}>
+          Loading...
+      </div>
+    )
+  }
 
   return (
     <>

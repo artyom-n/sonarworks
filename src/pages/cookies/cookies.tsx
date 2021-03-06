@@ -6,8 +6,8 @@ import axios from 'axios';
 
 const Cookies = () => {
 
-  const [title, setTitle] = useState<any>()
-  const [cookies, setCookies] = useState<any>()
+  const [title, setTitle] = useState<string | undefined>()
+  const [cookies, setCookies] = useState<string | undefined>()
 
   useEffect(() => {
     axios
@@ -17,6 +17,15 @@ const Cookies = () => {
         setCookies(res.data.content);
       })    
   }, [])
+
+  if (!title || !cookies) {
+    return(
+      <div 
+        className={style.loading}>
+          Loading...
+      </div>
+    )
+  }
 
   return (
     <>

@@ -6,8 +6,8 @@ import axios from 'axios';
 
 const Support = () => {
 
-  const [title, setTitle] = useState<any>()
-  const [support, setSupport] = useState<any>()
+  const [title, setTitle] = useState<string | undefined>()
+  const [support, setSupport] = useState<string | undefined>()
 
   useEffect(() => {
     axios
@@ -17,6 +17,15 @@ const Support = () => {
         setSupport(res.data.content);
       })    
   }, [])
+
+  if (!title || !support) {
+    return(
+      <div 
+        className={style.loading}>
+          Loading...
+      </div>
+    )
+  }
 
   return (
     <>

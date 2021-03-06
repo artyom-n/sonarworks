@@ -6,8 +6,8 @@ import axios from 'axios';
 
 const Terms = () => {
 
-  const [title, setTitle] = useState<any>()
-  const [terms, setTerms] = useState<any>()
+  const [title, setTitle] = useState<string | undefined>()
+  const [terms, setTerms] = useState<string | undefined>()
 
   useEffect(() => {
     axios
@@ -17,6 +17,15 @@ const Terms = () => {
         setTerms(res.data.content);
       })    
   }, [])
+
+  if (!title || !terms) {
+    return(
+      <div 
+        className={style.loading}>
+          Loading...
+      </div>
+    )
+  }
 
   return (
     <>

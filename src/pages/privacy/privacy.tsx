@@ -6,8 +6,8 @@ import axios from 'axios';
 
 const Privacy = () => {
 
-  const [title, setTitle] = useState<any>()
-  const [privacy, setPrivacy] = useState<any>()
+  const [title, setTitle] = useState<string | undefined>()
+  const [privacy, setPrivacy] = useState<string | undefined>()
 
   useEffect(() => {
     axios
@@ -17,6 +17,15 @@ const Privacy = () => {
         setPrivacy(res.data.content);
       })    
   }, [])  
+
+  if (!title || !privacy) {
+    return(
+      <div 
+        className={style.loading}>
+          Loading...
+      </div>
+    )
+  }
 
   return (
     <>

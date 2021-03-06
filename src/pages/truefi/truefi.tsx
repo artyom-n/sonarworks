@@ -6,8 +6,8 @@ import axios from 'axios';
 
 const Truefi = () => {
 
-  const [title, setTitle] = useState<any>()
-  const [truefi, setTruefi] = useState<any>()
+  const [title, setTitle] = useState<string | undefined>()
+  const [truefi, setTruefi] = useState<string | undefined>()
 
   useEffect(() => {
     axios
@@ -17,6 +17,15 @@ const Truefi = () => {
         setTruefi(res.data.content);
       })    
   }, [])
+
+  if (!title || !truefi) {
+    return(
+      <div 
+        className={style.loading}>
+          Loading...
+      </div>
+    )
+  }
 
   return (
     <>
