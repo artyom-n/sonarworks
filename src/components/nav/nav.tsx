@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const Nav = () => {
 
   return (
-    <div className={style.nav}>
+    <nav className={style.nav}>
       <div className={style.name}>
         <Link className={style.link} to="/">
           Sonarworks
@@ -26,7 +26,7 @@ const Nav = () => {
           />
         </Link>
       </div>
-    </div>
+    </nav>
   )
 };
 
