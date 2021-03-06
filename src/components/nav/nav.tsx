@@ -13,7 +13,7 @@ const Nav = () => {
         </Link>
       </div>
       <div className={style.legal}>
-        <Link className={style.link} to="/">
+        <Link className={style.link} to="/tracks">
           Legal centre
         </Link>
       </div>
