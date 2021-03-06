@@ -33,7 +33,12 @@
 
 .link {
     text-decoration: none;    
-    color: white
+    color: white;
+    transition: 0.2s;
+}
+
+.link:hover {
+    color: #96989C;
 }
 
 @media (max-width: 600px) {
