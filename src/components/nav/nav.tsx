@@ -7,7 +7,7 @@ const Nav = () => {
 
   return (
     <div className={style.nav}>
-      <div className={style.sonarworks}>
+      <div className={style.name}>
         <Link className={style.link} to="/">
           Sonarworks
         </Link>
@@ -17,11 +17,10 @@ const Nav = () => {
           Legal centre
         </Link>
       </div>
-      <div className={style.wrapper}>
+      <div className={style.logo}>
         <Link
           className={style.link} to="/">
           <img
-            className={style.logo}
             src={logo}
             alt="sonarworks"
           />

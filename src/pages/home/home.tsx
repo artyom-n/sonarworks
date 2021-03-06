@@ -1,6 +1,6 @@
 import React from 'react';
 import Nav from '../../components/nav/nav';
-import Statements from '../../components/statements/statements';
+import Policies from '../../components/policies/policies';
 import Footer from '../../components/footer/footer';
 
 const Home = () => { 
@@ -8,7 +8,7 @@ const Home = () => {
   return (
     <>
       <Nav />
-      <Statements />
+      <Policies />
       <Footer />
     </>
   )
