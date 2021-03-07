@@ -7,13 +7,13 @@ const Nav = () => {
 
   return (
     <nav className={style.nav}>
-      <div className={style.name}>
+      <div className={style.main}>
         <Link className={style.link} to="/">
           Sonarworks
         </Link>
       </div>
       <div className={style.legal}>
-        <Link className={style.link} to="/tracks">
+        <Link className={style.link} to="/legal">
           Legal centre
         </Link>
       </div>

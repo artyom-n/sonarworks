@@ -1,51 +1,29 @@
-import React, { useState, useEffect } from 'react';
-import style from "./legal.module.scss";
+import React from 'react';
 import Nav from '../../components/nav/nav';
 import Footer from '../../components/footer/footer';
-import axios from 'axios';
-import { useParams } from 'react-router-dom';
+import style from "./legal.module.scss";
 
 const Legal = () => {
 
-  const [title, setTitle] = useState<string | undefined>()
-  const [content, setContent] = useState<string | undefined>()
-
-  let { id } = useParams<{ id: string }>();
-
-  useEffect(() => {
-    axios
-      .get(`https://www.sonarworks.com/api/legal/${id}`)
-      .then((res) => {
-        setTitle(res.data.title);
-        setContent(res.data.content);
-      })
-  })
-
-  return (
-    !title || !content ?
-      (
-        <div
-          className={style.loading}>
-          Loading...
-        </div>
-      ) : (
+    return (
         <>
-          <Nav />
-          <section className={style.legal}>
-            <h3
-              className={style.title}
-            >
-              {title}
-            </h3>
-            <div
-            className={style.content}
-            dangerouslySetInnerHTML={{ __html: content }}
-            />
-          </section>
-          <Footer />
+            <Nav />
+            <section className={style.tracks}>
+                <h3 className={style.heading}>
+                    Using Reference Tracks
+                </h3>
+                <p className={style.paragraph}>
+                    When you are first listening to calibrated headphones or speakers, it is highly recommended to begin by listening to some music you know well. Chances are, by listening to your own music, you have already compensated for your room inaccuracies in your mix, making it sound unusual if calibration is applied.
+                </p>
+                <p className={style.paragraph}>
+                    So let your ears get used to the corrected sound of your system by listening to music that hasn't been produced by you.
+                </p>
+                <p className={style.paragraph}>
+                    When you get accustomed to your new corrected sound, you can try bypassing the plugin to hear the inaccuracies your room was causing before. Use the blue Calibrate button in the plugin to retain the same loudness levels when A/B listening.
+                </p>
+            </section>
+            <Footer />            
         </>
-      )
-  )
+    );
 }
-
 export default Legal;

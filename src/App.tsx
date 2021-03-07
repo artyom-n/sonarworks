@@ -1,7 +1,7 @@
 import React from 'react';
 import Home from './pages/home/home'
-import Tracks from './pages/tracks/tracks';
 import Legal from './pages/legal/legal';
+import Policy from './pages/policy/policy';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 const App = () => {
@@ -12,10 +12,10 @@ const App = () => {
         <Route exact path="/">
           <Home />
         </Route>
-        <Route exact path="/tracks">
-          <Tracks />
+        <Route exact path="/legal">
+          <Legal />
         </Route>
-        <Route path="/:id" children={<Legal />} />
+        <Route path="/:policy" children={<Policy />} />
       </Switch>
     </Router>
   );
